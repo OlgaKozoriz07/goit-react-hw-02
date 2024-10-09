@@ -7,7 +7,9 @@ const Options = ({ updateFeedback, isVisible }) => {
       <Button handleClick={() => updateFeedback("good")}>Good</Button>
       <Button handleClick={() => updateFeedback("neutral")}>Neutral</Button>
       <Button handleClick={() => updateFeedback("bad")}>Bad</Button>
-      {isVisible !== 0 && <Button handleClick={updateFeedback}>Reset</Button>}
+      {isVisible !== 0 && (
+        <Button handleClick={() => updateFeedback("reset")}>Reset</Button>
+      )}
     </div>
   );
 };
